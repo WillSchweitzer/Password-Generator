@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css?v=1.0">
+    <script src="https://kit.fontawesome.com/91368808da.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="char-toggle" id='symbols-container'>
+        <button type='button' class='char-btn'>!</button>
+        <button type='button' class='char-btn'>@</button>
+        <button type='button' class='char-btn'>#</button>
+        <button type='button' class='char-btn'>$</button>
+        <button type='button' class='char-btn'>%</button>
+        <button type='button' class='char-btn'>^</button>
+        <button type='button' class='char-btn'>&</button>
+        <button type='button' class='char-btn'>&</button>
+        <button type='button' class='char-btn'>*</button>
+        <button type='button' class='char-btn'>(</button>
+        <button type='button' class='char-btn'>)</button>
+        <button type='button' class='char-btn'>-</button>
+        <button type='button' class='char-btn'>+</button>
+        <button type='button' class='char-btn'>{</button>
+        <button type='button' class='char-btn'>}</button>
+        <button type='button' class='char-btn'>[</button>
+        <button type='button' class='char-btn'>]</button>
+    </section>
+
+    <section>
+
+        <form class='option-item'>
+            <!-- Uppercase Allowed -->
+            <label for="uppercase-toggle" class="password-option checkbox-offset">Uppercase Allowed</label>
+            <input id="uppercase-toggle" type="checkbox" name="uppercase-toggle" checked>
+
+            <!-- Delimiter -->
+            <div class="password-option">
+                <label for="delimiter">Delimiter:</label>
+                <input type="text" id="delimiter-input" name="delimiter" maxlength="1" value='-'>
+            </div>
+
+            <!-- Chunk Amount -->
+            <label for="noChunks" class="password-option">Number of Chunks</label>
+            <input type="number" id="number-chunks-input" name="noChunks" min="1" max='6' value='5'>
+
+            <!-- Chunk Size -->
+            <label for="chunkSize" class="password-option">Number of characters per Chunk</label>
+            <input type="number" id="chunk-size-input" name="chunkSize" min="1" max='5' value='3'>
+        </form>
+    </section>
+
+    <section class="password-preview">
+        <h3>This is what your password will look like</h3>
+        <samp id="password-preview"></samp>
+    </section>
+
+    <textarea id="password" rows="1" cols="65"></textarea>
+    <button id='generate-password-btn' type="submit" onclick="generatePassword()" autofocus >Generate Password</button>
+    <script src="script.js"></script>
+</body>
+</html>
