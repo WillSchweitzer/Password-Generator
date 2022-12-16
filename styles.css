@@ -1,5 +1,8 @@
 :root {
-    --char-btn-size: 45px;
+    --white: #FBFBFF;
+    --black: #040F16;
+    --active: #01BAEF;
+    --warning: #B80C09;
 }
 
 body {
@@ -66,4 +69,34 @@ textarea {
 .checkbox-offset {
     margin-right: -30px;
     padding-right: 30px;
+}
+
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+}
+
+.key {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    margin: 0.25em;
+    background-color: lightgray;
+    color: black;
+    border: 0.5px solid darkgray;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.active {
+    color: var(--white);
+    background-color: black;
+    border-color: lightgray;
+    box-shadow:
+        rgba(0, 0, 0, 0.09) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
